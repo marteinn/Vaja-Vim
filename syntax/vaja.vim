@@ -20,7 +20,13 @@ syntax match vajaNumber "\v<\d+\.\d+>"
 syntax keyword vajaBoolean
     \ true
     \ false
-syntax keyword vajaOperator and or not
+syntax match vajaOperator '\v\.@<!<%(and|or|not)>'
+syntax match vajaOperator '!=\|='
+syntax match vajaOperator '$\|&'
+syntax match vajaOperator '-\|->'
+syntax match vajaOperator '>\|>=\|<\|<='
+syntax match vajaOperator '|>'
+syntax match vajaOperator '+\|-\|%\|*\|/'
 syntax keyword vajaConditional if else case of
 syntax keyword vajaControl return
 
