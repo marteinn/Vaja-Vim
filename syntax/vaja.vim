@@ -12,5 +12,9 @@ echom "Our syntax highlighting code will go here."
 
 let b:current_syntax = "vaja"
 
+syntax keyword vajaKeywords
+      \ if
+      \ let
+      \ nil
 
-syn keyword basicLanguageKeywords let
+highlight default link vajaKeywords Keyword
