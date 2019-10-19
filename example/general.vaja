@@ -1,0 +1,5 @@
+let num = 1
+let float = 1.1
+let boolean = true
+let str = "string"
+let nilvar = nil
