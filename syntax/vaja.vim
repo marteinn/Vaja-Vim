@@ -14,6 +14,8 @@ syntax keyword vajaKeywords
       \ let
       \ nil
       \ case
+      \ import
+      \ from
 
 syntax match vajaNumber "\v<\d+>"
 syntax match vajaNumber "\v<\d+\.\d+>"
