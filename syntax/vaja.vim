@@ -31,12 +31,13 @@ syntax match vajaOperator '|>\|<<'
 syntax match vajaOperator '+\|-\|%\|*\|/'
 syntax match vajaComment "#.*$" contains=vajaTodo
 syntax keyword vajaInclude import
-syntax keyword vajaTodo	FIXME TODO XXX contained
+syntax keyword vajaTodo FIXME TODO XXX contained
 syntax keyword vajaConditional if else case of
 syntax keyword vajaControl return
-syntax keyword vajaBuiltin print type
-syntax keyword vajaBuiltin Array HashMap String IO Http
-setlocal commentstring=//\ %s
+syntax keyword vajaBuiltin print type identity exit always
+syntax keyword vajaBuiltin Array HashMap String IO Http Regex JSON
+
+setlocal commentstring=#\ %s
 
 
 syntax match vajaStringEscape "\v\\%([\\btnfr"]|u\x{4}|[0-3]\o{2}|\o{1,2})" contained

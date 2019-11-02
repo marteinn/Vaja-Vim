@@ -3,3 +3,10 @@ let float = 1.1
 let boolean = true
 let str = "string"
 let nilvar = nil
+
+print(1)
+identity(1)
+exit()
+always(5)
+
+fn(x) -> 1
