@@ -35,7 +35,8 @@ syntax keyword vajaTodo FIXME TODO XXX contained
 syntax keyword vajaConditional if else case of
 syntax keyword vajaControl return
 syntax keyword vajaBuiltin print type identity exit always
-syntax keyword vajaBuiltin Array HashMap String IO Http Regex JSON
+syntax keyword vajaBuiltin Array HashMap String IO Http Regex JSON Base64 UnitTest
+syntax keyword vajaBuiltin quote unquote
 
 setlocal commentstring=#\ %s
 
@@ -46,6 +47,8 @@ syntax region vajaString start=/"/ skip=/\\\\\|\\"/ end=/"/ contains=vajaStringE
 syntax region vajaFunctionBlock transparent matchgroup=vajaBlockDefinition start="\<fn\>" end="\<end\>" contains=TOP
 syntax region vajaFunctionBlock transparent matchgroup=vajaFunction start="\<fn\>" end="\<end\>" contains=TOP
 syntax region vajaAnonymousFunction matchgroup=vajaBlockDefinition start="\<fn\>" end="\<end\>" contains=ALLBUT,@vajaNotTop fold
+
+syntax region vajaFunctionBlock transparent matchgroup=vajaBlockDefinition start="\<macro\>" end="\<end\>" contains=TOP
 
 highlight default link vajaBlockDefinition Define
 highlight default link vajaKeywords Keyword
